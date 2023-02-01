@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Test</title>
+   
+    <style>
+*{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+  }
+  body {
+    display: grid;
+    grid-template-rows: min-content auto min-content;
+  }
+  .container{
+   background-color:rgb(58, 73, 77);
+   width: 100vw;
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+  }
+  .grid{
+    background-color: rgb(184, 187, 189);
+    width: 100vw;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+   justify-content: space-between;
+   
+  }
+  .image1{
+    height: 250px;
+   width: 350px;
+   border-radius: 20px;
+  }
+  .image2{
+    height: 250px;
+   width: 350px;
+   border-radius: 20px;
+  }
+  .image3{
+    height: 250px;
+   width: 350px;
+   border-radius: 20px;
+  }
+  .image4{
+    height: 250px;
+   width: 350px;
+   border-radius: 20px;
+  }
+  .imgcontainer{
+    display: flex;
+    align-items: center;
+   
+   flex-direction: column;
+  }
+    </style>
+</head>
+<body>
+    <!-- <h1 style="colo:white;">home page</h1> -->
+
+    <div class="container"> 
+
+
+      <div class="grid">
+       <div class="imgcontainer"><img   class="image1" src="https://cdn.educba.com/academy/wp-content/uploads/2020/04/Incremental-Model.jpg" alt=""><br> <p style="font-size: 1.2rem;">Click on this image to register</p></div>
+       <div class="imgcontainer"><img   class="image2" src="https://cdn.educba.com/academy/wp-content/uploads/2020/04/Incremental-Model.jpg" alt=""><br><p style="font-size: 1.2rem;">After registering click on this image</p></div>
+       <div class="imgcontainer"><img   class="image3" src="https://cdn.educba.com/academy/wp-content/uploads/2020/04/Incremental-Model.jpg" alt=""><br><p style="font-size: 1.2rem;">click on this image to reedem the coupon</p></div>
+       <div class="imgcontainer"><img   class="image4" src="https://cdn.educba.com/academy/wp-content/uploads/2020/04/Incremental-Model.jpg" alt=""><br><p style="font-size: 1.2rem;">click on this image to redeem the coupon</p></div>
+      </div>
+    </div>
+
+    
+    <script >
+    let grid_click= document.querySelector('.grid');
+     
+    let image_1=document.querySelector('.image1')
+    let image_2=document.querySelector('.image2')
+    let image_3=document.querySelector('.image3')
+    let image_4=document.querySelector('.image4')
+
+    image_1.addEventListener('click' , img1)
+    image_2.addEventListener('click' , img2)
+    // image_3.addEventListener('click' , img3)
+    image_4.addEventListener('click' , img4)
+
+    
+    function img1(){
+      console.log(0)
+      
+      window.location.href = "/form.html";
+      
+   
+        
+      }
+    function img2(){
+      window.location.href = "/image2.html";
+      
+
+    }
+
+
+    function img4(){
+      window.location.href = "/image4.html";
+    }
+     
+
+
+    
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <style>
+        *{
+            margin: 0%;
+           
+        }
+        .error{
+            
+            color: red;
+        }
+
+        
+        .singupform{
+           background-color: rgb(184, 187, 189); 
+            height: 100vh;
+            width: 100wh;
+            display:flex;
+           justify-content: center;
+           align-items: center;
+         flex-direction: column;
+         color: white;
+
+        }
+       #Username{
+            height: 25px;
+            width: 300px;
+        }
+       #name{
+            height: 25px;
+            width: 300px;
+        }
+        #email{
+            height: 25px;
+            width: 300px;
+        }
+        #submitbutton{
+            width: 150px;
+            height: 40px;
+            border-radius: 10px;
+            transition-duration: 0.4s;
+        }
+        #submitbutton:hover{
+            background-color: rgb(58,73,77);
+            color: white;
+            
+        }
+        .button{
+            display:flex;
+           justify-content: center;
+           align-items: center;
+         flex-direction: column;
+         padding-top: 20px;
+         
+        }
+        .container{
+            height:530px;
+           width: 400px;
+           background-color: rgb(58, 73, 77);
+           display:flex;
+           justify-content: center;
+           align-items: center;
+         flex-direction: column;
+         border-radius: 15px;
+
+        }
+      label{
+        font-size: 40px;
+      }
+      
+        
+        h1{
+            color: white;
+            font-size: 3rem;
+            padding-bottom: 10px;
+        } 
+    </style>
+</head>
+<body>
+
+          
+          <div class="singupform">
+            
+            <div class="container">
+                
+                <p class="error">  </p>
+                <br>
+                <h1>Signup Form</h1>
+             <form class="signup">
+          
+             <label for="name">Name</label> <br>
+             <input type="text" name="name" id="name" placeholder="Enter your name">
+             <br> <br>
+             <label for="Username">Username</label><br>
+             <input type="text" name="Username" id="Username" placeholder="Username">
+             <br><br>
+             <label for="email">Email</label><br>
+             <input type="email" name="email" id="email" placeholder="Enter your Email">
+             <br><br>
+              <div class="button">
+             <input type="submit" id="submitbutton"> 
+          </div>
+           
+       </form>
+     </div>
+       </div>
+       
+
+       <script>
+         
+
+let signup_form  = document.querySelector('.signup');
+
+let input_name = document.querySelector('#name');
+let input_Username = document.querySelector('#Username');
+let input_Email = document.querySelector('#email');
+let error = document.querySelector('.error');
+
+
+
+signup_form.addEventListener('submit', validateForm)
+
+// let arr = []
+// console.log(arr);
+
+
+function validateForm(e) {
+     e.preventDefault();
+        let name = input_name.value;
+        let username=input_Username.value;
+         let email=input_Email.value;
+        // console.log(Username)
+       
+
+          if(username == name){
+            error.innerHTML="Name and username should be not same"
+          }
+       
+      else{
+            error.innerHTML = 'Thanks for registering'; 
+      }
+       let obj ={
+        name,
+        username
+       }
+      //  arr.push(obj)
+       sessionStorage.setItem('fullname' , name );
+       sessionStorage.setItem('fullusername' , username );
+
+
+
+    }
+
+//  function checkPassword(password, name){ // "A$bhi123"
+//     let cl = 0 , sl = 0, n=0, sc=0
+//     for(let t of password){ //  A
+//        if(t>="A" && t<="Z"){
+//          cl= cl+1 // capital letter
+//        }
+//        else if(t>="a" && t<="z"){
+//          sl++ // small letter
+//        }
+//        else if(t>="0" && t<="9"){
+//             n++ // number
+//          }
+//          else{
+//             sc++ // special character
+//          }
+//     }
+//     if(cl>=1 && sl>=1 && n>=1 && sc>=1 && password !=name ){
+//         return true
+//     }
+//     else{
+//         return false
+//     }
+//  }
+
+
+
+       </script>
+</body>
+</html>
